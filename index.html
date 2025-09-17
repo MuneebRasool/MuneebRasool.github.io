@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Applied Intuition – IA & GTM Chronology</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9fafc;
+      color: #222;
+      line-height: 1.5;
+    }
+    header {
+      background: #1e293b;
+      color: #fff;
+      padding: 1rem 2rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+    main {
+      padding: 1.5rem 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+      border-left: 4px solid #3b82f6;
+      padding-left: 1rem;
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: #1e293b;
+    }
+    details {
+      margin: 0.5rem 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.5rem 0.75rem;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #2563eb;
+    }
+    ul {
+      margin: 0.25rem 0 0.5rem 1.2rem;
+    }
+    .era {
+      background: #f1f5f9;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Applied Intuition – Website IA & GTM Evolution</h1>
+    <p>From single-product seed to platform posture</p>
+  </header>
+  <main>
+
+    <section>
+      <h2>2018 – Seed Stage: Object Sim (Single Product)</h2>
+      <div class="era">
+        <details open>
+          <summary>Product</summary>
+          <ul>
+            <li>Object Sim = scene engine for virtual driving scenarios.</li>
+            <li>Defines <strong>ground truth world</strong>: roads, actors, weather, lighting.</li>
+            <li>Teams could run millions of safe miles in sim instead of on-road.</li>
+            <li><em>Means:</em> build scenarios like “child runs into road at dusk,” run 1,000x with variations, measure outcomes.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Validation / Why it mattered</summary>
+          <ul>
+            <li>AV programs asked “how many miles are enough?”</li>
+            <li>Simulation provided scalable <strong>scenario coverage</strong>, not just log replay.</li>
+            <li>Edge cases caught virtually before expensive road tests.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Website IA</summary>
+          <ul>
+            <li>Very simple: “Simulation software for AVs.”</li>
+            <li>Only About, Careers, Contact pages.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Focus & GTM</summary>
+          <ul>
+            <li>Positioned as “safety mileage multiplier.”</li>
+            <li>Sold bottom-up to AV labs (Cruise, Zoox, Argo).</li>
+            <li>Demos on specific pains (night pedestrians, unprotected turns).</li>
+            <li>Founder credibility (ex-Google/Stanford) helped close early pilots.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <h2>2019–2021 – Expanding to a Simulation Suite</h2>
+      <div class="era">
+        <details open>
+          <summary>New Product Modules</summary>
+          <ul>
+            <li><strong>Sensor Sim:</strong> renders what sensors “see” from Object Sim ground truth.<br>
+              – Cameras: pixels after optics, motion blur, noise.<br>
+              – LiDAR: point clouds with range noise, weather attenuation.<br>
+              – Radar: detections with Doppler, clutter, multipath.<br>
+              <em>Means:</em> perception errors come from sensor physics, so models need realistic inputs.</li>
+            <li><strong>Log Sim:</strong> replays timestamped raw sensor logs from real drives.<br>
+              – Test on true field distributions (sun glare, dirty lens).<br>
+              – Blend synthetic actors into real logs: e.g. add a cyclist at night.<br>
+              <em>Means:</em> anchors sim to real world & augments missing cases.</li>
+            <li><strong>Cloud Engine:</strong> runs massive scenario sweeps in parallel.<br>
+              <em>Means:</em> turn test catalog into daily CI gate; no workstation bottlenecks.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Integration back to Object Sim</summary>
+          <ul>
+            <li>Object Sim = perfect world state.</li>
+            <li>Sensor Sim = projects that into sensor space with imperfections.</li>
+            <li>Log Sim = validates stack on real-world distributions.</li>
+            <li>Cloud = scales it all into coverage metrics.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Packaging & GTM</summary>
+          <ul>
+            <li>Website now had Products section: Object, Sensor, Log, Cloud.</li>
+            <li>Modular SKUs: land with one, expand later.</li>
+            <li>Cross-sell into OEM R&D teams; bundle pricing.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Validation</summary>
+          <ul>
+            <li>Case studies (Toyota, VW labs).</li>
+            <li>Papers citing Applied tools.</li>
+            <li>Reputation as <strong>default sim suite</strong>.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <h2>2022 – Vehicle Dynamics + HIL</h2>
+      <div class="era">
+        <details open>
+          <summary>Key Expansion</summary>
+          <ul>
+            <li>Acquired CarSim → high-fidelity vehicle dynamics models.</li>
+            <li>VehicleSim: tires, suspension, braking, steering physics.</li>
+            <li>HIL: connect real ECUs/controllers into virtual scenarios.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Why</summary>
+          <ul>
+            <li>Safety depends on <strong>vehicle response</strong>, not just perception.</li>
+            <li><em>Means:</em> test stopping distances, stability, controller tuning before track.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Product Strategy & GTM</summary>
+          <ul>
+            <li>Extend from perception-only → full system validation.</li>
+            <li>Appeal to validation & safety teams (ISO 26262).</li>
+            <li>Larger ACVs; multi-year V&V contracts.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Validation</summary>
+          <ul>
+            <li>OEMs caught pre-track defects earlier.</li>
+            <li>Differentiated from niche perception-only sim vendors.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <h2>2023–2024 – Adding Solutions & Industries</h2>
+      <div class="era">
+        <details open>
+          <summary>Solutions</summary>
+          <ul>
+            <li>Large-scale testing = Cloud + Object + Sensor → coverage metrics for execs.</li>
+            <li>Sensor suite validation = Sensor + Log + Test Suites → choose right sensors.</li>
+            <li>Verification & Validation = mapping requirements to tests + audit reports.</li>
+            <li>Automated Parking = domain-specific curated package.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Industries</summary>
+          <ul>
+            <li>Automotive → compliance, ADAS validation.</li>
+            <li>Trucking → logistics ROI, faster autonomy ROI.</li>
+            <li>Defense → battlefield sims, contested environments.</li>
+            <li>Mining/Agriculture → uptime, worker safety.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Website & GTM</summary>
+          <ul>
+            <li>Website IA: new top nav for Solutions & Industries.</li>
+            <li>Products now sit as ingredients of solutions.</li>
+            <li>Exec-friendly outcomes messaging; vertical sales pods.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Validation</summary>
+          <ul>
+            <li>Customer logos across OEM & startups.</li>
+            <li>Defense portal shows seriousness for DoD buyers.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <h2>2025 – Platform Posture</h2>
+      <div class="era">
+        <details open>
+          <summary>Positioning Shift</summary>
+          <ul>
+            <li>Vehicle OS = on-board runtime for deployment & monitoring.</li>
+            <li>SDS = packaged autonomy stack for planning/control.</li>
+            <li>Toolchain = full sim + data + validation loop feeding OS & SDS.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>What This Means</summary>
+          <ul>
+            <li>Applied positions as the <strong>operating system of autonomy</strong>.</li>
+            <li>Closed feedback loop = strong lock-in.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Website IA & GTM</summary>
+          <ul>
+            <li>Solutions lead; Products as proof.</li>
+            <li>Industries show TAM; Defense as parallel motion.</li>
+            <li>Exec-level platform contracts; multi-year deals.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Validation</summary>
+          <ul>
+            <li>Platform-wide OEM deals.</li>
+            <li>Expansion into DoD programs.</li>
+            <li>Seen as category leader.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
